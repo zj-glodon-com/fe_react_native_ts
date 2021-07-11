@@ -14,6 +14,7 @@
 		1C6E7D0B269AE814003D222B /* ZJMapViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6E7D0A269AE814003D222B /* ZJMapViewManager.m */; };
 		1C6E7D1A269AF1C9003D222B /* RCTConvert+Mapkit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6E7D19269AF1C9003D222B /* RCTConvert+Mapkit.m */; };
 		1C6E7D21269AF48E003D222B /* ZJMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6E7D20269AF48E003D222B /* ZJMapView.m */; };
+		1C6E7D27269AFFB7003D222B /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C6E7D26269AFFB7003D222B /* CalendarManager.m */; };
 		62B9930CFE5925C89231D797 /* libPods-fe_react_native_ts.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E2742A2D9352F7FAAD6CAF5 /* libPods-fe_react_native_ts.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		CC834F584413CE759BF1C1CB /* libPods-fe_react_native_ts-fe_react_native_tsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 32C8102A2A96B1885E78B591 /* libPods-fe_react_native_ts-fe_react_native_tsTests.a */; };
@@ -45,6 +46,8 @@
 		1C6E7D19269AF1C9003D222B /* RCTConvert+Mapkit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "RCTConvert+Mapkit.m"; sourceTree = "<group>"; };
 		1C6E7D1F269AF48E003D222B /* ZJMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJMapView.h; sourceTree = "<group>"; };
 		1C6E7D20269AF48E003D222B /* ZJMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJMapView.m; sourceTree = "<group>"; };
+		1C6E7D25269AFFB7003D222B /* CalendarManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
+		1C6E7D26269AFFB7003D222B /* CalendarManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
 		1CB6303071D2E07E9F3CD8E6 /* Pods-fe_react_native_ts-fe_react_native_tsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fe_react_native_ts-fe_react_native_tsTests.release.xcconfig"; path = "Target Support Files/Pods-fe_react_native_ts-fe_react_native_tsTests/Pods-fe_react_native_ts-fe_react_native_tsTests.release.xcconfig"; sourceTree = "<group>"; };
 		23C3EA3A5DAEB1D66BD611A6 /* Pods-fe_react_native_ts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fe_react_native_ts.release.xcconfig"; path = "Target Support Files/Pods-fe_react_native_ts/Pods-fe_react_native_ts.release.xcconfig"; sourceTree = "<group>"; };
 		32C8102A2A96B1885E78B591 /* libPods-fe_react_native_ts-fe_react_native_tsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-fe_react_native_ts-fe_react_native_tsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,7 @@
 		13B07FAE1A68108700A75B9A /* fe_react_native_ts */ = {
 			isa = PBXGroup;
 			children = (
+				1C6E7D24269AFD32003D222B /* NativeModules */,
 				1C6E7CF0269ADE5A003D222B /* NativeViews */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -118,6 +122,16 @@
 			);
 			name = NativeViews;
 			path = fe_react_native_ts/NativeViews;
+			sourceTree = "<group>";
+		};
+		1C6E7D24269AFD32003D222B /* NativeModules */ = {
+			isa = PBXGroup;
+			children = (
+				1C6E7D25269AFFB7003D222B /* CalendarManager.h */,
+				1C6E7D26269AFFB7003D222B /* CalendarManager.m */,
+			);
+			name = NativeModules;
+			path = fe_react_native_ts/NativeModules;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -439,6 +453,7 @@
 				1C6E7D1A269AF1C9003D222B /* RCTConvert+Mapkit.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				1C6E7D21269AF48E003D222B /* ZJMapView.m in Sources */,
+				1C6E7D27269AFFB7003D222B /* CalendarManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
