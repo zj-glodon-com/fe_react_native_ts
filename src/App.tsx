@@ -11,6 +11,7 @@
 import React, { useRef } from 'react';
 import { View, StatusBar, StyleSheet, useColorScheme } from 'react-native';
 import { NavigationContainerRef } from '@react-navigation/native';
+import { RootSiblingParent } from 'react-native-root-siblings';
 
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { RootNavigator } from './navigators/root-navigator';
@@ -24,10 +25,12 @@ const App = () => {
   };
 
   return (
-    <View style={[backgroundStyle, styles.container]}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <RootNavigator ref={navigationRef as any} />
-    </View>
+    <RootSiblingParent>
+      <View style={[backgroundStyle, styles.container]}>
+        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+        <RootNavigator ref={navigationRef as any} />
+      </View>
+    </RootSiblingParent>
   );
 };
 
