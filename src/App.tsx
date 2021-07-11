@@ -16,6 +16,10 @@ import { RootSiblingParent } from 'react-native-root-siblings';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
 import { RootNavigator } from './navigators/root-navigator';
 
+import { Provider } from 'react-redux';
+import createStore from './store';
+export const store = createStore();
+
 const App = () => {
   const navigationRef = useRef<NavigationContainerRef>();
 
@@ -25,12 +29,14 @@ const App = () => {
   };
 
   return (
-    <RootSiblingParent>
-      <View style={[backgroundStyle, styles.container]}>
-        <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-        <RootNavigator ref={navigationRef as any} />
-      </View>
-    </RootSiblingParent>
+    <Provider store={store}>
+      <RootSiblingParent>
+        <View style={[backgroundStyle, styles.container]}>
+          <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
+          <RootNavigator ref={navigationRef as any} />
+        </View>
+      </RootSiblingParent>
+    </Provider>
   );
 };
 

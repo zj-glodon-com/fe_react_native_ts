@@ -15,8 +15,7 @@ const renderTitle = (props: StackHeaderTitleProps) => {
   return <Text>自定义title</Text>;
 };
 
-// eslint-disable-next-line no-alert
-const renderBtn = () => <Button onPress={() => alert('点击左侧按钮')} title="左侧按钮" color="red" />;
+const renderBtn = () => <Button onPress={() => console.log('点击左侧按钮')} title="左侧按钮" color="red" />;
 
 export const HomeNavigator = () => (
   <Stack.Navigator
